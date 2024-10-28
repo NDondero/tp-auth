@@ -1,0 +1,9 @@
+<nav>
+    <a class="button" routerLink="/">Home</a>
+    @if (!activeUser) {
+    <a class="button" routerLink="/login" routerLinkActive="activebutton">Log in</a>
+    <a class="button" routerLink="/signup" routerLinkActive="activebutton">Registraste</a>
+    } @else {
+    <a class="button" (click)="onLogOut()">Log out</a>
+    }
+</nav>
